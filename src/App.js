@@ -1,24 +1,28 @@
+//Basic imports
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+//CSS Files
+import './css/reset.css';
+import './css/1140.css';
+import './css/theme.css';
+//Images
+import Logo from './imgs/Logo.png';
+//Pages Components
+import Homepage from './pages/homepage/homepage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container12">
+        <header>
+          <div className="row">
+            <div className="column12">
+              <a href="file:///Users/apple/Desktop/Toolspick/HTML/index.html"><img src={Logo} alt="Toolspick.IO" /></a>
+            </div>
+          </div>
+        </header>
+        <Router>
+          <Route path="/" exact component={Homepage} />
+        </Router>
     </div>
   );
 }
