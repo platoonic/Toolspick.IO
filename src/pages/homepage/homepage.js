@@ -1,5 +1,6 @@
 //Basic imports
 import React from "react";
+import {Link} from 'react-router-dom';
 //Child components
 import SearchBar from './searchBar';
 //Images
@@ -11,16 +12,16 @@ class Homepage extends React.Component{
 			<div className="row">
 				<div className="column7">
 					<div className="cta">
-						<h1 data-aos="fade-up">
+						<h1>
 							Choose the right tool for your next <span className="red">creative</span> project.
 						</h1>
-						<p data-aos="fade-up">
+						<p>
 							Toolspick is an open-source analysis tool that helps web developers choose the right framework / library / dependency to use in their projects by giving them detailed statistics that help shape their decision. 
 						</p>
 						<SearchBar />
 						<div className="browse">
 							<span>or</span>
-							<button className="btn green">Browse</button>
+							<Link to="/browse/all" className="btn green">Browse</Link>
 						</div>
 						<div className="links">
 							<ul>

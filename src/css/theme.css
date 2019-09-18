@@ -30,6 +30,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .btn{
+	text-decoration: none;
 	display:inline-block;
 	padding:13px 35px;
 	border-radius:25px;
@@ -176,7 +177,7 @@ header{
 	color:#b0b0b0;
 }
 
-.cta .browse button{
+.cta .browse .btn{
 	margin-left:15px;
 }
 
@@ -221,8 +222,8 @@ header{
 
 .list{
 	background-color:white;
-	min-height: 900px;
 	box-shadow: 0px 3px 25.92px 1.08px rgba(113, 123, 125, 0.09);
+	margin-bottom:50px;
 }
 
 .single.list{
@@ -246,7 +247,7 @@ header{
 	font-size:12px;
 	border:0;
 	font-weight: 300;
-	margin-left:5px;
+	margin-left:10px;
 }
 
 .select_menu.gray{
@@ -349,11 +350,19 @@ header{
 	color:#c1c1c1;
 }
 
+.items{
+	height:400px;
+	overflow:scroll;
+}
+
 .items .item{
 	border-bottom:1px solid #f8f6f6;
 }
 
-.items .item .description, .title, .stats, .details{
+.items .item .description,
+.items .item .title,
+.items .item .stats,
+.items .item .details{
 	padding:22px;
 }
 
@@ -368,14 +377,13 @@ header{
 }
 
 .items .stats{
-	padding-left:80px;
+	padding:22px 0 22px 0 !important;
 }
 
 .items .stats span.title{
 	font-size:13px;
 	font-family:'Fira Sans';
 	color:#979797;
-	padding-left:25px;
 }
 
 .items .stats .meter{
@@ -396,9 +404,20 @@ header{
   border-bottom-right-radius: 8px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: #95d69f;
   position: relative;
   overflow: hidden;
+}
+
+.items .stats .meter > span.high{
+	background-color: #95d69f;
+}
+
+.items .stats .meter > span.moderate{
+	background-color: #dfebb7;
+}
+
+.items .stats .meter > span.low{
+	background-color: #e38c8c;
 }
 
 .items .details a{
@@ -487,3 +506,80 @@ header{
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+.loadingTools{
+	position:relative;
+	width: 100%;
+}
+
+.loadingTools .item{
+	border-bottom:1px solid #f8f6f6;
+	padding:19px;
+}
+
+.loadingTools .gradient{
+	animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #c9c9c9;
+    background: linear-gradient(to right, #fafafa 8%, #f4f4f4 38%, #fafafa 54%);
+    background-size: 1000px 640px;
+    position: relative;    
+    display:inline-block;
+    height:20px;
+}
+
+.loadingTools .title{
+	width:100px;
+	margin-left:10px;
+}
+.loadingTools .description{
+	width:300px;
+	margin-left:90px;
+}
+
+.loadingTools .stats{
+	width:250px;
+	margin-left:80px;
+}
+
+.loadingTools .details{
+	width:100px;
+	margin-left:150px;
+}
+
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
