@@ -1,31 +1,25 @@
-//Basic imports
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-//CSS Files
-import './css/reset.css';
-import './css/1140.css';
-import './css/theme.css';
-//Images
-import Logo from './imgs/Logo.png';
-//Pages Components
-import Homepage from './pages/homepage/homepage';
-import Browse   from './pages/browse/browse';
+import logo from './logo.svg';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div className="container12">
-          <header>
-            <div className="row">
-              <div className="column12">
-                <Link to="/"><img src={Logo} alt="Toolspick.IO" /></Link>
-              </div>
-            </div>
-          </header>
-            <Route key={0} path="/" exact component={Homepage} />
-            <Route key={1} path="/browse/all" component={Browse} />
-      </div>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
