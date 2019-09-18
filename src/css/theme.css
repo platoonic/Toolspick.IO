@@ -145,6 +145,29 @@ header{
 	font-size:16px;
 }
 
+.cta .search .suggestions{
+	position:absolute;
+	width:100%;
+	z-index:99;
+	background-color:#424242;
+	margin-top:10px;
+}
+
+.cta .search .suggestions a{
+	color:white;
+	display:block;
+	text-decoration: none;
+	padding:15px;
+	color:#c9c9c9;
+	font-size:13px;
+	transition:background-color 0.4s;
+}
+
+.cta .search .suggestions a:hover{
+	background-color:#9fb8be;
+	color:white;
+}
+
 .cta .browse{
 	margin-top:50px;
 }
@@ -444,4 +467,23 @@ header{
 .single .metrics .metric i{
 	color:#7e7e7e;
 	padding-right:3px;
+}
+
+/* React Animations */
+.suggestions-enter {
+  opacity: 0.01;
+}
+
+.suggestions-enter.suggestions-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.suggestions-leave {
+  opacity: 1;
+}
+
+.suggestions-leave.suggestions-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

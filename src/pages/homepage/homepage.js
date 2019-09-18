@@ -1,4 +1,8 @@
+//Basic imports
 import React from "react";
+//Child components
+import SearchBar from './searchBar';
+//Images
 import HeaderVector from '../../imgs/header-vector.png';
 
 class Homepage extends React.Component{
@@ -13,13 +17,10 @@ class Homepage extends React.Component{
 						<p data-aos="fade-up">
 							Toolspick is an open-source analysis tool that helps web developers choose the right framework / library / dependency to use in their projects by giving them detailed statistics that help shape their decision. 
 						</p>
-						<div className="search" data-aos="fade-right">
-							<input type="text" name="search-term" placeholder="start by “Backend framework”, “AR/VR”... or “ReactJS”, “Redis”, “Docker”..." />
-							<button className="btn blue"><i className="fa fa-search"></i></button>
-						</div>
-						<div className="browse" data-aos="fade-right">
+						<SearchBar />
+						<div className="browse">
 							<span>or</span>
-							<button onclick="location.href='file:///Users/apple/Desktop/Toolspick/HTML/browse.html';" className="btn green">Browse</button>
+							<button className="btn green">Browse</button>
 						</div>
 						<div className="links">
 							<ul>
