@@ -10,6 +10,7 @@ class SearchBar extends React.Component{
 		super(props);
 		this.state = {
 			suggestionsShown: false,
+			searchButtonActive: false,
 			query: '',
 			suggestions: ['React', 'Redis', 'Retrd']
 		}
@@ -18,21 +19,21 @@ class SearchBar extends React.Component{
 	handleChange = (e) => {
 		this.setState({query: e.target.value});
 		if(e.target.value != ''){
-			this.setState({suggestionsShown: true});
+			this.setState({suggestionsShown: true, searchButtonActive: false});
 		}else{
-			this.setState({suggestionsShown: false});
+			this.setState({suggestionsShown: false, searchButtonActive: false});
 		}
 	}
 
 	fillSearchBar = (value) => {
-		this.setState({suggestionsShown: false, query: value});
+		this.setState({suggestionsShown: false, searchButtonActive: true, query: value});
 	}
 
 	render(){
 		return(
 			<div className="search">
-				<input value={this.state.query} onChange={(e) => {this.handleChange(e)}} type="text" name="search-term" placeholder="start by “Backend framework”, “AR/VR”... or “ReactJS”, “Redis”, “Docker”..." />
-				<button className="btn blue"><i className="fa fa-search"></i></button>
+				<input value={this.state.query} onChange={(e) => {this.handleChange(e)}} type="text" name="search-term" placeholder="start by “Backend framework”, “AR/VR”... or “ReactJS”, “Redis”, “Docker”..."/>
+				<button className="btn blue"  disabled={this.state.searchButtonActive === false ? "disabled" : ""}><i className="fa fa-search"></i></button>
 				<CSSTransitionGroup transitionName="suggestions" 
 									transitionEnterTimeout={400} 
 									transitionLeaveTimeout={300}>

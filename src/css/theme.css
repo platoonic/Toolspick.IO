@@ -9,6 +9,10 @@ html{
 	height:100%;
 }
 
+button:disabled{
+	background-color:#acacac !important;
+}
+
 body{
 	/*background-color:#f6f8f9;*/
 	font-family: 'Fira Sans', sans-serif;

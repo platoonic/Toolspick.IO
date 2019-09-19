@@ -78,7 +78,7 @@ class Browse extends React.Component{
 						activity: 60
 					}
 				]});
-		}, 1000);
+		}, 3000);
 	}
 
 	render(){
