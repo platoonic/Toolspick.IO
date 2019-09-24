@@ -10,6 +10,7 @@ import Logo from './imgs/Logo.png'
 //Pages Components
 import Homepage from './pages/homepage/homepage'
 import Browse   from './pages/browse/browse'
+import View from './pages/view/view'
 
 const App = () => {
   return (
@@ -22,8 +23,9 @@ const App = () => {
               </div>
             </div>
           </header>
-            <Route key={0} path="/" exact component={Homepage} />
-            <Route key={1} path="/browse/all" component={Browse} />
+            <Route path="/" exact component={Homepage} />
+            <Route path="/browse/all" component={Browse} />
+            <Route path="/view/:id" component={View} />
       </div>
     </Router>
   )
