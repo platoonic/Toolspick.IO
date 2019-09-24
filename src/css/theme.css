@@ -29,6 +29,15 @@ h1,h2,h3,h4,h5,h6{
 	font-weight: 700;
 }
 
+::selection {
+  background: #7f9bbb; /* WebKit/Blink Browsers */
+  color:white;
+}
+::-moz-selection {
+  background: #7f9bbb; /* Gecko Browsers */
+  color:white;
+}
+
 .bold{
 	font-weight:bold;
 }
@@ -376,9 +385,13 @@ header{
 	padding:22px;
 }
 
-.items .item h4{
+.items .item h4, .items .item h2{
 	color:#4e4e4e;
 	display:inline-block;
+}
+
+.data h2{
+	font-size:22px;
 }
 
 .items .item .description span, span.description{
@@ -520,9 +533,13 @@ header{
   transition: opacity 300ms ease-in;
 }
 
-.loadingTools{
+.loadingTools, .loadingTool{
 	position:relative;
 	width: 100%;
+}
+
+.loadingTool{
+	padding:10px 20px 20px 20px;
 }
 
 .loadingTools .item{
@@ -530,7 +547,7 @@ header{
 	padding:19px;
 }
 
-.loadingTools .gradient{
+.gradient{
 	animation-duration: 1.8s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -542,6 +559,10 @@ header{
     position: relative;    
     display:inline-block;
     height:20px;
+}
+
+.list.loading{
+	height:650px;
 }
 
 .loadingTools .title{
@@ -561,6 +582,12 @@ header{
 .loadingTools .details{
 	width:100px;
 	margin-left:150px;
+}
+
+.loadingTool .data{
+	width:270px;
+	height:170px;
+	margin-top:35px;
 }
 
 
