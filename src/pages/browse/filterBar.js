@@ -1,9 +1,9 @@
 //Basic imports
-import React from 'react';
+import React from 'react'
 
 class FilterBar extends React.Component{
 	constructor(props){
-		super(props);
+		super(props)
 		this.state = {
 			types: [{id: 0, name: 'All'}, 
 					{id: 1, name: 'DBMS'},
@@ -23,7 +23,7 @@ class FilterBar extends React.Component{
 						{this.state.types.map((type) => {
 							return(
 								<option value={type.id}>{type.name}</option>
-							);
+							)
 						})}
 					</select>
 				</div>
@@ -74,8 +74,8 @@ class FilterBar extends React.Component{
 					<a href="#"><i className="fa fa-search"></i></a>
 				</div>
 			</div>
-		);
+		)
 	}
 }
 
-export default FilterBar;
+export default FilterBar

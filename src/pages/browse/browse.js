@@ -1,18 +1,18 @@
 //Basic imports
-import React from 'react';
+import React from 'react'
 //Child components
-import ToolsList from './toolsList';
-import FilterBar from './filterBar';
+import ToolsList from './toolsList'
+import FilterBar from './filterBar'
 
 class Browse extends React.Component{
 	constructor(props){
-		super(props);
+		super(props)
 		this.state = {
 			toolsLoaded: false,
 			per_page: 7,
 			tools: []
-		};
-		this.mockRequest = null;
+		}
+		this.mockRequest = null
 	}
 
 	componentDidMount(){
@@ -77,8 +77,8 @@ class Browse extends React.Component{
 						stability: 70,
 						activity: 60
 					}
-				]});
-		}, 3000);
+				]})
+		}, 3000)
 	}
 
 	render(){
@@ -120,7 +120,7 @@ class Browse extends React.Component{
 									<div class="stats gradient"></div>
 									<div class="details gradient"></div>
 								</div>
-							  </div>;
+							  </div>
 		return(
 			<div className="row">
 				<div className="list">
@@ -128,8 +128,8 @@ class Browse extends React.Component{
 					{this.state.toolsLoaded === true ? <ToolsList tools={this.state.tools}/> : loadingBlocks}
 				</div>
 			</div>
-		);
+		)
 	}
 }
 
-export default Browse;
+export default Browse

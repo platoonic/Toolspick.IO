@@ -1,10 +1,10 @@
 //Basic imports
-import React from "react";
-import {Link} from 'react-router-dom';
+import React from "react"
+import {Link} from 'react-router-dom'
 //Child components
-import SearchBar from './searchBar';
+import SearchBar from './searchBar'
 //Images
-import HeaderVector from '../../imgs/header-vector.png';
+import HeaderVector from '../../imgs/header-vector.png'
 
 class Homepage extends React.Component{
 	render(){
@@ -36,8 +36,8 @@ class Homepage extends React.Component{
 					<img src={HeaderVector} alt="" />
 				</div>
 			</div>
-		);
+		)
 	}
 }
 
-export default Homepage;
+export default Homepage

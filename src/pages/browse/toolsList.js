@@ -1,26 +1,26 @@
 //Basic imports
-import React from 'react';
+import React from 'react'
 
 const ToolsList = (props) => {
 	return(
 		<div className="items">
 			{props.tools.map((tool) => {
 				//Custom CSS based on level for stability & activity progress bars
-				let stabilityLevel;
-				let activityLevel;
+				let stabilityLevel
+				let activityLevel
 				if(tool.stability > 70){
-					stabilityLevel = "high";
+					stabilityLevel = "high"
 				}else if(tool.stability > 30){
-					stabilityLevel = "moderate";
+					stabilityLevel = "moderate"
 				}else{
-					stabilityLevel = "low";
+					stabilityLevel = "low"
 				}
 				if(tool.activity > 70){
-					activityLevel = "high";
+					activityLevel = "high"
 				}else if(tool.activity > 30){
-					activityLevel = "moderate";
+					activityLevel = "moderate"
 				}else{
-					activityLevel = "low";
+					activityLevel = "low"
 				}
 				return(
 					<div className="row">
@@ -55,10 +55,10 @@ const ToolsList = (props) => {
 							</div>
 						</div>
 					</div>
-				);
+				)
 			})}
 		</div>
-	);
+	)
 }
 
-export default ToolsList;
+export default ToolsList
