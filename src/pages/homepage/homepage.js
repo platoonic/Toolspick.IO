@@ -16,7 +16,7 @@ class Homepage extends React.Component{
 							Choose the right tool for your next <span className="red">creative</span> project.
 						</h1>
 						<p>
-							Toolspick is an open-source analysis tool that helps web developers choose the right framework / library / dependency to use in their projects by giving them detailed statistics that help shape their decision. 
+							Toolspick is an open-source analysis tool that helps web developers choose the right framework / library / package to use in their projects by giving them detailed statistics that help shape their decision. 
 						</p>
 						<SearchBar />
 						<div className="browse">
