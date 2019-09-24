@@ -67,6 +67,7 @@ h1,h2,h3,h4,h5,h6{
 .btn.back{
 	background-color:#d6d6d6;
 	color:white;
+	margin-left:10px;
 	padding-left:50px;
 	padding-top:15px;
 	padding-bottom:15px;
@@ -359,6 +360,11 @@ header{
 	overflow:scroll;
 }
 
+.items.single{
+	overflow:visible;
+	height:auto;
+}
+
 .items .item{
 	border-bottom:1px solid #f8f6f6;
 }
@@ -438,6 +444,10 @@ header{
 	border-bottom:1px dotted #538cb4;
 }
 
+.single{
+	padding-bottom:15px;
+}
+
 .single .stats{
 	padding-left:0 !important;
 	margin-left:0 !important;
@@ -471,14 +481,13 @@ header{
 }
 
 .single .metrics{
-	padding:22px;
-	padding-top:15px;
-	border-top:1px solid #f3f1f1;
+	margin-top:15px;
+	background-color:#fafafa;
+	padding:15px;
 }
 
 .single .metrics .metric{
-	display:inline-block;
-	margin-right:30px;
+	padding:10px;
 }
 
 .single .metrics .metric span{
@@ -489,7 +498,7 @@ header{
 
 .single .metrics .metric i{
 	color:#7e7e7e;
-	padding-right:3px;
+	padding-right:10px;
 }
 
 /* React Animations */

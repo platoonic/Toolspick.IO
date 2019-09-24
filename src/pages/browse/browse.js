@@ -2,7 +2,7 @@
 import React from 'react'
 //Child components
 import ToolsList from './toolsList'
-import FilterBar from './filterBar'
+import ToolsBar from './toolsBar'
 
 class Browse extends React.Component{
 	constructor(props){
@@ -78,53 +78,53 @@ class Browse extends React.Component{
 						activity: 60
 					}
 				]})
-		}, 3000)
+		}, 1000)
 	}
 
 	render(){
 		//Loading animation div
-		const loadingBlocks = <div class="loadingTools">
-								<div class="item">
-									<div class="title gradient"></div>
-									<div class="description gradient"></div>
-									<div class="stats gradient"></div>
-									<div class="details gradient"></div>
+		const loadingBlocks = <div className="loadingTools">
+								<div className="item">
+									<div className="title gradient"></div>
+									<div className="description gradient"></div>
+									<div className="stats gradient"></div>
+									<div className="details gradient"></div>
 								</div>
-								<div class="item">
-									<div class="title gradient"></div>
-									<div class="description gradient"></div>
-									<div class="stats gradient"></div>
-									<div class="details gradient"></div>
+								<div className="item">
+									<div className="title gradient"></div>
+									<div className="description gradient"></div>
+									<div className="stats gradient"></div>
+									<div className="details gradient"></div>
 								</div>
-								<div class="item">
-									<div class="title gradient"></div>
-									<div class="description gradient"></div>
-									<div class="stats gradient"></div>
-									<div class="details gradient"></div>
+								<div className="item">
+									<div className="title gradient"></div>
+									<div className="description gradient"></div>
+									<div className="stats gradient"></div>
+									<div className="details gradient"></div>
 								</div>
-								<div class="item">
-									<div class="title gradient"></div>
-									<div class="description gradient"></div>
-									<div class="stats gradient"></div>
-									<div class="details gradient"></div>
+								<div className="item">
+									<div className="title gradient"></div>
+									<div className="description gradient"></div>
+									<div className="stats gradient"></div>
+									<div className="details gradient"></div>
 								</div>
-								<div class="item">
-									<div class="title gradient"></div>
-									<div class="description gradient"></div>
-									<div class="stats gradient"></div>
-									<div class="details gradient"></div>
+								<div className="item">
+									<div className="title gradient"></div>
+									<div className="description gradient"></div>
+									<div className="stats gradient"></div>
+									<div className="details gradient"></div>
 								</div>
-								<div class="item">
-									<div class="title gradient"></div>
-									<div class="description gradient"></div>
-									<div class="stats gradient"></div>
-									<div class="details gradient"></div>
+								<div className="item">
+									<div className="title gradient"></div>
+									<div className="description gradient"></div>
+									<div className="stats gradient"></div>
+									<div className="details gradient"></div>
 								</div>
 							  </div>
 		return(
 			<div className="row">
 				<div className="list">
-					<FilterBar />
+					<ToolsBar page="browse"/>
 					{this.state.toolsLoaded === true ? <ToolsList tools={this.state.tools}/> : loadingBlocks}
 				</div>
 			</div>

@@ -1,5 +1,6 @@
 //Basic imports
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const ToolsList = (props) => {
 	return(
@@ -49,7 +50,7 @@ const ToolsList = (props) => {
 							</div>
 							<div className="column2">
 								<div className="details">
-									<a href="file:///Users/apple/Desktop/Toolspick/HTML/package.html">Details</a>
+									<Link to="/view/15">Details</Link>
 									<a href="http://www.github.com">Github</a>
 								</div>
 							</div>
