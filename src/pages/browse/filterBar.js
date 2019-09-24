@@ -30,10 +30,24 @@ class FilterBar extends React.Component{
 				<div className="select filter">
 					<i className="fa fa-chevron-down"></i>
 					<select name="Filter" className="select_menu blue" id="filter">
-						<option value="1">Activity: All</option>
-						<option value="1">High</option>
-						<option value="1">Moderate</option>
-						<option value="1">Low</option>
+						<option value="1">Language: All</option>
+						<option value="1">C</option>
+						<option value="1">C++</option>
+						<option value="1">C#</option>
+						<option value="1">Python</option>
+						<option value="1">PHP</option>
+						<option value="1">Ruby</option>
+						<option value="1">Java</option>
+						<option value="1">Javascript</option>
+						<option value="1">R</option>
+						<option value="1">Haskel</option>
+						<option value="1">Golang</option>
+						<option value="1">Rust</option>
+						<option value="1">Visual Basic</option>
+						<option value="1">Erlang</option>
+						<option value="1">Assembly</option>
+						<option value="1">Actionscript</option>
+						<option value="1">MATLAB</option>
 					</select>
 				</div>
 				<div className="select filter">
